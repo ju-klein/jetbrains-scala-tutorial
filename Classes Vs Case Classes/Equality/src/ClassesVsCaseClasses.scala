@@ -1,9 +1,9 @@
 object ClassesVsCaseClasses {
-  val aliceAccount = /*create a new BankAccount here*/
-  val bobAccount   = /*create a new BankAccount here*/
+  val aliceAccount = new BankAccount
+  val bobAccount   = new BankAccount
 
-  val c3     = /*create a new c3 note here with a quarter duration*/
-  val cThree = /*create a new c3 note here with a quarter duration*/
+  val c3     = Note("C", "Quarter", 3)
+  val cThree = Note("C", "Quarter", 3)
 
   def main(args: Array[String]): Unit = {
     println(aliceAccount == bobAccount)

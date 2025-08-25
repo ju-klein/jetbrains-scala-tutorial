@@ -3,7 +3,7 @@ object SyntacticConveniences {
     for {
       x <- xs if x % 2 == 0
       y <- ys
-    } /*complete the function*/
+    } yield (x,y)
   }
 
   def functionDesugared(xs: Array[Int], ys: Array[Int]): Array[(Int, Int)] = {

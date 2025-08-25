@@ -1,11 +1,11 @@
 object HigherOrderFunctions {
-  def sumBetween(f: /*put here an appropriate type of an f input parameter*/ => /*put here an appropriate type of an f output result*/, a: Int, b: Int): Int = {
+  def sumBetween(f: Int => Int, a: Int, b: Int): Int = {
     def loop(x: Int, acc: Int): Int = {
       if (x > b) acc
-      else loop(x + /* TODO */, acc + f(x))
+      else loop(x + 1, acc + f(x))
     }
 
-    loop(a, /*here you need to insert initial acc value*/)
+    loop(a, 0)
   }
 
   def main(args: Array[String]): Unit = {

@@ -15,9 +15,15 @@ object RationalArithmetic {
         denom * r.denom
       )
     def * (r: Rational) =
-      /*create a Rational with appropriate expressions for numerator and denomenator*/
+      new Rational(
+        numer * r.numer,
+        denom * r.denom
+      )
     def / (r: Rational) =
-      /*create a Rational with appropriate expressions for numerator and denomenator*/
+      new Rational( /* inverted multiplication is probably easier */
+        numer * r.denom,
+        denom * r.numer
+      )
   }
 
   def main(args: Array[String]): Unit = {

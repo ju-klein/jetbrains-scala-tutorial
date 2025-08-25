@@ -3,7 +3,7 @@ object LazyEvaluation {
   def llRange(lo: Int, hi: Int): LazyList[Int] = {
     rec = rec + 1
     if (lo >= hi) LazyList.empty
-    else LazyList.cons(lo, /*call the llRange for the rest of the list*/)
+    else LazyList.cons(lo, llRange(lo + 1, hi))
   }
   def main(args: Array[String]): Unit = {
     llRange(1, 10).take(3).toList

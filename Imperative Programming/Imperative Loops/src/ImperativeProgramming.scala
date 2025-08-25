@@ -1,10 +1,10 @@
 object ImperativeProgramming {
   def factorial(n: Int): Int = {
-    var result = /*insert the initial resul value*/
-    var i      = /*insert the initial i value*/
+    var result = 1
+    var i      = 1
     while (i <= n) {
       result = result * i
-      i = i + /*insert the i step*/
+      i = i + 1
     }
     result
   }

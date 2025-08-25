@@ -1,9 +1,9 @@
 object SyntacticConveniences {
   def greet(name: String): String =
-    /*insert the correct prefix here*/"Hello, $name!"
+    s"Hello, $name!"
 
   def greetLouder(name: String): String =
-    s"Hello, /*introduce the dynamic value here and make it uppercase*/!"
+    s"Hello, ${name.toUpperCase}!"
 
   def main(args: Array[String]): Unit = {
     println(greet("Scala"))

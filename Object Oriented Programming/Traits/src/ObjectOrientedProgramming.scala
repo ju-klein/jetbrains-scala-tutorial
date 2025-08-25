@@ -9,11 +9,11 @@ object ObjectOrientedProgramming {
   }
 
   object Product extends Reducer(1) {
-    def combine(x: Int, y: Int): Int = /*insert an appropriate expression*/
+    def combine(x: Int, y: Int): Int = x * y
   }
 
   object Sum extends Reducer(0) {
-    def combine(x: Int, y: Int): Int = /*insert an appropriate expression*/
+    def combine(x: Int, y: Int): Int = x + y
   }
 
   val nums = List(1, 2, 3, 4)

@@ -1,13 +1,14 @@
 object SyntacticConveniences {
 
-  case class Range(start: Int, end: Int, step: Int /*add a default parameter, so the step is 1*/)
+  case class Range(start: Int, end: Int, step: Int = 1)
 
 
-  def average(x: Int, xs: /*add an expression for the repeated parameter*/): Double =
+  def average(x: Int, xs: Int*): Double = /* Had to peek because I thought the type ascription
+                                            would be _* */
     (x :: xs.toList).sum.toDouble / (xs.size + 1)
 
 
-  type Result = Either[String, /*the output result of the divide should be a tuple of Ints*/]
+  type Result = Either[String, (Int, Int)]
   def divide(dividend: Int, divisor: Int): Result =
     if (divisor == 0) Left("Division by zero")
     else Right((dividend / divisor, dividend % divisor))

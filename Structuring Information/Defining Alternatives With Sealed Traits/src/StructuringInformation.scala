@@ -2,16 +2,16 @@ object StructuringInformation {
 
   sealed trait Symbol
   case class Note(name: String, duration: String, octave: Int) extends Symbol
-  case class Rest(duration: String) //extend the sealed trait Symbol here
+  case class Rest(duration: String) extends Symbol
 
   def symbolDuration(symbol: Symbol): String =
     symbol match {
-    case Note(name, duration, octave) => //we need to return a similar to the Rest field
+    case Note(name, duration, octave) => duration
     case Rest(duration) => duration
   }
 
   def caseClassEquals(note: Note, otherNote: Note): Boolean = {
-    //return a result of equality check here
+    note == otherNote
   }
 
   def main(args: Array[String]): Unit = {

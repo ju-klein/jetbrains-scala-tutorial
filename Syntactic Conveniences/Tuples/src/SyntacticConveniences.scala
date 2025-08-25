@@ -1,5 +1,5 @@
 object SyntacticConveniences {
-  def pair(i: Int, s: String): (Int, String) = /*create the tuple here*/
+  def pair(i: Int, s: String): (Int, String) = (i, s)
 
   def main(args: Array[String]): Unit = {
     val is: (Int, String) = pair(42, "foo")

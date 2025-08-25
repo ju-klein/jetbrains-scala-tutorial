@@ -1,7 +1,7 @@
 object TermsAndTypes {
 
   def staticTyping(): Range.Inclusive =
-    1 to //insert the upper boundary of the range here, it should be of an appropriate type
+    1 to 0  /* deliberately used a rim case to learn about semantics */
 
   def main(args: Array[String]): Unit = {
     println(staticTyping())

@@ -1,8 +1,8 @@
 object PolymorphicTypes {
   def size[A](xs: List[A]): Int =
     xs match {
-      case Nil     /*insert what we should return in case of Nil*/
-      case y :: ys /*insert what we should add for an element of the list*/ + size(ys)
+      case Nil =>  0
+      case y :: ys => 1 + size(ys)
     }
 
   def main(args: Array[String]): Unit = {

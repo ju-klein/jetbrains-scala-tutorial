@@ -7,8 +7,8 @@ object StructuringInformation {
   def fractionOfWhole(duration: Duration): Double =
     duration match {
       case Whole   => 1.0
-      case Half    => //return half of a whole
-      /*this should be one of the casesq, for a quarter duration*/ => 0.25
+      case Half    => 0.5
+      case Quarter => 0.25
     }
 
   def main(args: Array[String]): Unit = {

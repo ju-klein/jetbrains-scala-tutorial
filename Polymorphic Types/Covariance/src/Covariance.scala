@@ -6,7 +6,9 @@ object Covariance {
   abstract class Mammal extends Animal
   case object Zebra extends Mammal
 
-  class AnimalVet/*complete  the class definition with covariance and animal parameter*/
+  class AnimalVet[+A](animalparameter: A) {
+    val animal = animalparameter
+  }
 
   def main(args: Array[String]): Unit = {
     val reptileVet = new AnimalVet(Reptile)

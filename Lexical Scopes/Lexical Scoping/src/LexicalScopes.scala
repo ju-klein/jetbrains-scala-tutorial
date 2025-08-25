@@ -12,7 +12,7 @@ object LexicalScopes {
 
       import Bar.x
 
-      val y = /*insert the x variable from the Bar object here*/ + /*here you need to insert the x value from the Foo object*/
+      val y = x + Foo.x
     }
 
     Baz.y

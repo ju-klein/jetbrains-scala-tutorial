@@ -7,7 +7,7 @@ object TypeBounds {
 
   class Zebra extends Mammal
 
-  def selection[A >: /*insert a correct lower bound Type to include Zebra*/ <: /*insert an upper bound type to include Animal*/](a: A): A =
+  def selection[A >: Zebra <: Animal](a: A): A =
     a
 
   val unknownAnimal = new Animal

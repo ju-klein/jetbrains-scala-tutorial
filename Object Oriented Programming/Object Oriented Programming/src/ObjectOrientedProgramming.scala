@@ -1,5 +1,5 @@
 object ObjectOrientedProgramming {
-  var nonEmptyExample = /*Create a NonEmpty contatining 7*/
+  var nonEmptyExample = new NonEmpty(7, Empty, Empty)
 
   def main(args: Array[String]): Unit = {
     println(Empty contains 2)

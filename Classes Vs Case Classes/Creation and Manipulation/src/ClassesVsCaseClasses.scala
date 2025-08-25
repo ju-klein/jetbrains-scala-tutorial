@@ -1,7 +1,7 @@
 object ClassesVsCaseClasses {
   val aliceAccount = new BankAccount
-  /*deposit 100 on the Alice's account*/
-  val c3 = /*create a c3 note with a quarter duration*/
+  aliceAccount deposit(100)
+  val c3 = Note("C", "Quarter", 3) /* I DID put a "new" modifier. apparently unnecessary. */
 
   def main(args: Array[String]): Unit = {
     println(aliceAccount.withdraw(10))

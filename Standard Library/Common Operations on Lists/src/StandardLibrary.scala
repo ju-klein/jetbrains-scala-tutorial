@@ -1,15 +1,17 @@
 object StandardLibrary {
 
   def optionMap(x: Option[Int]) : Option[Int]= {
-    /*map the x values to x + 1*/
+   x.map(x => x + 1)
   }
 
   def optionFilter(x: Option[Int]): Option[Int] = {
-    /*filter the x values to return only even ones*/
+    x.filter(x => x % 2 == 0)
   }
 
   def optionFlatMap(x: Option[Int]): Option[Int] = {
-    /*use flatMap to return the option for x + 1*/
+    x.flatMap(x => Some(x + 1)) /* this was a bug, and my solution read Some(x).
+                              However, I believe this was not suficiently specified.
+                              I also do not want to hide my mistakes. */
   }
 
   def main(args: Array[String]): Unit = {
