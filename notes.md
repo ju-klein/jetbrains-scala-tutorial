@@ -471,7 +471,7 @@ We can express preconditions using the `require()` function:
 ```Scala
   def division(nominator: Int, denominator: Int): Int = 
     require(denominator != 0, "cannot divide by zero")
-    ```
+```
     
 `require` throws an `IllegalArgumentException` with the message string on violation of the precondition.
 
